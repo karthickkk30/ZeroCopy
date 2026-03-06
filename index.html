@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZeroCopy - Mock Interview Platform</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#0b0b0b;color:#ffffff}
+header{padding:20px 60px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:26px;font-weight:700}
+nav a{color:white;text-decoration:none;margin-left:25px}
+.hero{padding:120px 60px;text-align:center}
+.hero h1{font-size:48px;margin-bottom:20px}
+.hero p{font-size:18px;opacity:0.8}
+.btn{display:inline-block;margin-top:30px;padding:14px 30px;background:white;color:black;text-decoration:none;border-radius:6px;font-weight:600}
+.section{padding:80px 60px;text-align:center}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin-top:40px}
+.card{background:#1a1a1a;padding:30px;border-radius:10px}
+.waitlist{font-size:28px;margin-top:20px;font-weight:bold}
+footer{text-align:center;padding:30px;opacity:0.6}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">ZeroCopy</div>
+<nav>
+<a href="#features">Features</a>
+<a href="#about">About</a>
+<a href="join.html">Join</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Practice Interviews. Zero Guesswork.</h1>
+<p>ZeroCopy helps students prepare for real job interviews through realistic mock interviews, peer practice, and instant feedback.</p>
+<a class="btn" href="join.html">Start Practicing</a>
+
+<div class="waitlist">
+Students Joined: <span id="counter">0</span>
+</div>
+</section>
+
+<section id="features" class="section">
+<h2>Platform Features</h2>
+<div class="features">
+<div class="card">
+<h3>Mock Interviews</h3>
+<p>Practice realistic interview scenarios with peers and mentors.</p>
+</div>
+<div class="card">
+<h3>AI Feedback</h3>
+<p>Get instant feedback on answers, confidence, and communication.</p>
+</div>
+<div class="card">
+<h3>Resume Based Questions</h3>
+<p>Generate interview questions based on your resume.</p>
+</div>
+<div class="card">
+<h3>Performance Analytics</h3>
+<p>Track improvement and identify weak areas.</p>
+</div>
+</div>
+</section>
+
+<section id="about" class="section">
+<h2>About ZeroCopy</h2>
+<p>ZeroCopy is a student-focused platform designed to help candidates gain confidence before real interviews. Our goal is to make interview preparation accessible, practical, and effective.</p>
+</section>
+
+<footer>
+<p>© 2026 ZeroCopy. All rights reserved.</p>
+</footer>
+
+<script>
+// simple waitlist counter using localStorage
+let count = localStorage.getItem("zerocopy_users");
+if(!count){
+count = 1;
+localStorage.setItem("zerocopy_users",count);
+}
+document.getElementById("counter").innerText = count;
+</script>
+
+</body>
+</html>
+
+
